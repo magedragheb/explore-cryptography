@@ -1,0 +1,1 @@
+AES-GCM using [Nsec](https://github.com/ektrah/nsec)
