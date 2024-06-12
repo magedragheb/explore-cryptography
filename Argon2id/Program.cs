@@ -8,9 +8,6 @@ var salt = new byte[16];
 RandomNumberGenerator.Fill(salt);
 var config = new Argon2Config
 {
-    MemoryCost = 64,
-    TimeCost = 3,
-    Lanes = 4,
     Salt = salt,
     Password = Encoding.UTF8.GetBytes(text)
 };
