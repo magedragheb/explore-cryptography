@@ -17,9 +17,11 @@ Stopwatch sw = Stopwatch.StartNew();
 var hash = Argon2.Hash(config);
 
 sw.Stop();
-
 Console.WriteLine(sw.ElapsedMilliseconds);
-
 Console.WriteLine(hash);
+sw.Restart();
 
 Console.WriteLine(Argon2.Verify(hash, text));
+
+sw.Stop();
+Console.WriteLine(sw.ElapsedMilliseconds);
